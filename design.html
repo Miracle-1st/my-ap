@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Design & Graphs</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .box {
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    a {
+      color: #38bdf8;
+      display: block;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    /* GRAPH STYLE */
+    .bar-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      height: 200px;
+      margin-top: 20px;
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .bar {
+      width: 40px;
+      background: #38bdf8;
+      transition: height 0.5s;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .label {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="box">
+    <h1>🎨 Design & Graph Studio</h1>
+    <p>Create visuals and view simple graphs</p>
+
+    <button onclick="generateGraph()">
+      Generate Graph
+    </button>
+  </div>
+
+  <div class="box">
+    <h3>📊 Simple Graph</h3>
+
+    <div class="bar-container">
+      <div>
+        <div class="bar" id="bar1"></div>
+        <div class="label">Mon</div>
+      </div>
+
+      <div>
+        <div class="bar" id="bar2"></div>
+        <div class="label">Tue</div>
+      </div>
+
+      <div>
+        <div class="bar" id="bar3"></div>
+        <div class="label">Wed</div>
+      </div>
+
+      <div>
+        <div class="bar" id="bar4"></div>
+        <div class="label">Thu</div>
+      </div>
+
+      <div>
+        <div class="bar" id="bar5"></div>
+        <div class="label">Fri</div>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="index.html">⬅ Back to Home</a>
+
+</div>
+
+<script>
+function generateGraph() {
+  const bars = [
+    document.getElementById("bar1"),
+    document.getElementById("bar2"),
+    document.getElementById("bar3"),
+    document.getElementById("bar4"),
+    document.getElementById("bar5")
+  ];
+
+  bars.forEach(bar => {
+    let randomHeight = Math.floor(Math.random() * 180) + 20;
+    bar.style.height = randomHeight + "px";
+  });
+}
+
+// initial graph load
+generateGraph();
+</script>
+
+</body>
+</html>
