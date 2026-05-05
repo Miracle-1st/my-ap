@@ -1,88 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Design & Graphs</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 40px;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .box {
-      background: #1f2937;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    a {
-      color: #38bdf8;
-      display: block;
-      margin-top: 20px;
-      text-decoration: none;
-    }
-
-    /* GRAPH STYLE */
-    .bar-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-end;
-      height: 200px;
-      margin-top: 20px;
-      background: #0f172a;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .bar {
-      width: 40px;
-      background: #38bdf8;
-      transition: height 0.5s;
-      border-radius: 5px 5px 0 0;
-    }
-
-    .label {
-      margin-top: 5px;
-      font-size: 12px;
-      color: #cbd5e1;
-    }
-  </style>
-</head>
-
 <body>
 
 <div class="container">
 
+  <!-- HEADER IMAGE -->
   <div class="box">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+         style="width:100%; border-radius:12px; margin-bottom:15px;">
+    
     <h1>🎨 Design & Graph Studio</h1>
-    <p>Create visuals and view simple graphs</p>
+    <p>Interactive graph generator with visual data</p>
 
-    <button onclick="generateGraph()">
-      Generate Graph
-    </button>
+    <button onclick="generateGraph()">Generate New Graph</button>
   </div>
 
+  <!-- GRAPH IMAGE SECTION -->
   <div class="box">
-    <h3>📊 Simple Graph</h3>
+    <h3>📊 Graph Visualization</h3>
+
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+         style="width:100%; border-radius:12px; margin-bottom:15px;">
 
     <div class="bar-container">
       <div>
@@ -113,29 +49,17 @@
 
   </div>
 
+  <!-- EXTRA GRAPHICS IMAGES -->
+  <div class="box">
+    <h3>🖼️ More Graphics</h3>
+
+    <img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2"
+         style="width:48%; border-radius:12px; margin:5px;">
+
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+         style="width:48%; border-radius:12px; margin:5px;">
+  </div>
+
   <a href="index.html">⬅ Back to Home</a>
 
 </div>
-
-<script>
-function generateGraph() {
-  const bars = [
-    document.getElementById("bar1"),
-    document.getElementById("bar2"),
-    document.getElementById("bar3"),
-    document.getElementById("bar4"),
-    document.getElementById("bar5")
-  ];
-
-  bars.forEach(bar => {
-    let randomHeight = Math.floor(Math.random() * 180) + 20;
-    bar.style.height = randomHeight + "px";
-  });
-}
-
-// initial graph load
-generateGraph();
-</script>
-
-</body>
-</html>
